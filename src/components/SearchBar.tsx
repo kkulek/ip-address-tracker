@@ -1,14 +1,13 @@
-import React, {useState} from "react";
+import React from "react";
 
-export function SearchBar() {
-    const [input, setInput] = useState("");
-
+export function SearchBar({setInput, ipCheck, input}) {
     const handleInput = (event: React.ChangeEvent<HTMLInputElement>) => {
         setInput(event.target.value)
     }
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
+        ipCheck()
     }
 
     return (
