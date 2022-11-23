@@ -8,6 +8,9 @@ module.exports = {
       colors: {
         "light": "#969696",
         "dark": "#2b2b2b"
+      },
+      backgroundImage: {
+        "arrow": "url('./images/icon-arrow.svg')"
       }
     },
   },
