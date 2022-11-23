@@ -10,7 +10,8 @@ module.exports = {
         "dark": "#2b2b2b"
       },
       backgroundImage: {
-        "arrow": "url('./images/icon-arrow.svg')"
+        "arrow": "url('./images/icon-arrow.svg')",
+        "pattern": "url('./images/pattern-bg.png')",
       }
     },
   },
