@@ -5,6 +5,7 @@ import {Results} from "./components/Results";
 function App() {
     const [input, setInput] = useState();
     const [data, setData] = useState();
+    const [coordinates, setCoordinates] = useState();
 
     const ipCheck = () => {
         const url: string = "https://geo.ipify.org/api/v2/country,city?apiKey=at_34fpoNOyxJSnGPVZ2KLnACVqprCe7&ipAddress="
@@ -13,10 +14,20 @@ function App() {
             .then(data => setData(data))
     }
 
+    useEffect(() => {
+        let dataCoordinates = [];
+
+        if (data) {
+            dataCoordinates.push(data.location.lat);
+            dataCoordinates.push(data.location.lng);
+            setCoordinates(dataCoordinates);
+        }
+    }, [data])
+
     return (
         <main>
             <SearchBar setInput={setInput} ipCheck={ipCheck} input={input}/>
-            <Results data={data}/>
+            <Results data={data} coordinates={coordinates}/>
         </main>
     );
 }
