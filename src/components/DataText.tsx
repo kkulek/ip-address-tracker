@@ -2,8 +2,7 @@ import React from "react";
 
 export function DataText({data}){
     return (
-        !data ? null :
-        <section className="absolute bg-white p-10 -top-14 w-[90%] max-w-[1000px] rounded
+        <section className="absolute bg-white p-10 -top-14 w-[90%] max-w-[1000px] rounded z-10
                         flex flex-col md:flex-row justify-around gap-6 flex-wrap md:divide-x md:divide-light
                         text-center md:text-left">
             <div>
